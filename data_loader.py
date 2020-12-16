@@ -4,6 +4,13 @@ import pkg_resources
 import pandas as pd
 
 
+
+
+def sp500_2017():
+    stream = pkg_resources.resource_stream(__name__, 'data/sp500_2017.csv')
+    return pd.read_csv(stream, encoding='latin-1')
+    
+
 def sp500_2000():
     stream = pkg_resources.resource_stream(__name__, 'data/sp500_2000.csv')
     return pd.read_csv(stream, encoding='latin-1')
